@@ -26,15 +26,15 @@ coding_club_pitch(coding)
 
 ## Challenge 1: What's greatest?
 
-Write a function that takes three numbers as arguments(A, B, and C) and returns the place of the number that is the greatest among the group. If A is greatest return "The first", if A and B are equal and greatest return "Multiple are greatest"
+Write a function that takes three numbers as arguments (A, B, and C) and returns the place of the number that is the greatest among the group. If A is greatest return "The first", if A and B are equal and greatest return "Multiple are greatest".
 
 ## Challenge 2: Mini Mad Libs
 
-Write a function that takes 3 arguments and uses them in place of the words "blue", "fish", and "two" in the rhyme "one fish, two fish, red fish, blue fish"
+Write a function that takes 3 arguments and uses them in place of the words "blue", "fish", and "two" in the rhyme "one fish, two fish, red fish, blue fish".
 
 ## Challenge 3: In bounds
 
-Write a function that takes a height and width of a graph and x and y values of a point. Return `True` if the x and y values are within the map, if they are off the map, return `False`
+Write a function that takes a height and width of a graph and x and y values of a point. Return `True` if the x and y values are within the map, if they are off the map, return `False`.
 
 ## Challenge 4: On the map
 
