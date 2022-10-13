@@ -10,8 +10,8 @@ In the field, two beggars A and B found some gold at the same time. They all wan
 
 Given an integer array `golds`, and assuming that A always takes first, calculate the final amount of gold obtained by A and B. Return a two-element array `[A_amount, B_amount]`.
 
+**Example 1**
 ```
-Example
 For golds = [4,2,9,5,2,7], the output should be [14,15].
 
 Left-most pile is 4, 
@@ -40,6 +40,20 @@ B takes 2
 A: 7 + 2 + 5 = 14
 B: 4 + 9 + 2 = 15
 ```
+
+**Example 2**
+```
+For golds = [10,1000,2,1], the output should be [12,1001].
+
+A takes 10
+B takes 1000
+A takes 2
+B takes 1
+
+A: 10 + 2 = 12
+B: 1000 + 1 = 1001
+```
+
 
 ## Challenge 2: English beggars
 
