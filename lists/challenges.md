@@ -54,10 +54,13 @@ A: 10 + 2 = 12
 B: 1000 + 1 = 1001
 ```
 
+Original problem [here](https://www.codewars.com/kata/59547688d8e005759e000092).
 
 ## Challenge 2: English beggars
 
 Given an array of values and an amount of beggars, return an array with the sum of what each beggar brings home, assuming they all take regular turns, from the first to the last. For example: `[1,2,3,4,5]` for 2 beggars will return a result of `[9,6]`, as the first one takes `[1,3,5]`, the second collects [`2,4]`. The same array with 3 beggars would have in turn have produced a better out come for the second beggar: `[5,7,3]`, as they will respectively take `[1,4]`, `[2,5]` and `[3]`.
+
+Original problem [here](https://www.codewars.com/kata/59590976838112bfea0000fa).
 
 ## Challenge 3: Josephus 
 
@@ -80,6 +83,7 @@ josephus_survivor(7,3) # 7 people, one every 3 is eliminated
                        # 4 is the last element - the survivor!
 ```
 
+Original problem [here](https://www.codewars.com/kata/555624b601231dc7a400017a).
 ### Part 2: Permutation
 
 Create a function called `josephus_permutation(n, k)` that returns a Josephus permutation. More information is on the [Josephus Problem](https://en.wikipedia.org/wiki/Josephus_problem) wikipedia page.
@@ -96,3 +100,5 @@ josephus_permutation(7,3) # final result is [3,6,2,7,5,1,4]
 [4]                       # 1 is counted out and goes into the result [3,6,2,7,5,1]
 []                        # 4 is counted out and goes into the result [3,6,2,7,5,1,4]
 ```
+
+Original problem [here](https://www.codewars.com/kata/5550d638a99ddb113e0000a2).
