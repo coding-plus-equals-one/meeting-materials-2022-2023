@@ -1,6 +1,6 @@
-# Dicts(Dictionaries)
+# Dicts (Dictionaries)
 ## A dictionary is a sequence
-Dictionaries are like lists but with indexes set by the creator of the dict rather than just 0, 1, 2, 3. The values in a dict are stored as key:value pairs where the key acts as the index. The key can be any primitive/immutable type and the value can be of any type
+Dictionaries are like lists but with indexes set by the creator of the dict rather than just 0, 1, 2, 3. The values in a dict are stored as key:value pairs where the key acts as the index. Both the key and the value can be any value.
 
 There are several ways to create a new dict. The simplest is to enclose the key:value pairs inside curly braces:
 
@@ -9,9 +9,7 @@ There are several ways to create a new dict. The simplest is to enclose the key:
 {1:False, 1.52:"cattle", True:234, "string":1.242}
 ```
 
-The first example is a dict of four key:value pairs that are all strings. The second is a dict exampling the usage of mismatching primitives. The key:value pairs don’t have to be the same type. You can have repeat values but not repeat keys.
-
-
+The first example is a dict of four key:value pairs that are all strings. The second is a dict with mismatched types. The key:value pairs don’t have to be the same type. You can have repeated values but not repeated keys.
 
 ```python
 {"hats":"sphere", "hats":"axe", "castle":"axe"}
@@ -20,13 +18,15 @@ The first example is a dict of four key:value pairs that are all strings. The se
 
 The first dict will become the second dict when the code is run. Repeated keys will use the last instance of the key. The repeated value is allowed.
 
-Alternatively you can use `dict()` to create dictionaries in two other ways. In the first example the first word will become a string and be the key, in the second we use nested iterables
+Alternatively you can use `dict()` to create dictionaries in two other ways.
+
 ```python
 dict(hats="value", cats="hats") # {"hats":"value", "cats":"hats"}
 dict([(1, 4), ("key", "value"), ("thing", 3)]) # {1:4, "key":"value", "thing":3}
 ```
 
-Another way to quickly create a dictionary where all the values are the same is `dict.fromkeys()`. This will take 2 arguments with the first being an iterable to make the keys as and the second being the value. If there is no second value it will default to none
+Another way to quickly create a dictionary where all the values are the same is `dict.fromkeys()`. This will take 2 arguments. The first is an iterable (usualy a list) that contains keys. The second is the value. If there is no second value, it will default to `None`.
+
 ```python
 dict.fromkeys([1,2,3], "nums") # {1:"nums", 2:"nums", 3:"nums"}
 dict.fromkeys([5,6,7]) # {5:None, 6:None, 7:None}
@@ -49,7 +49,7 @@ days[2] # "tuesday"
 ```
 
 Here are some rules:
-- If you try to read an element that does not exist, you get a `KeyError`.
+- If you try to read an element that does not exist, you will get a `KeyError`.
 - If you try to edit or assign to a key that does not exist, that key:value pair will be created and put at the end of the dict.
 
 You can assign new key:value pairs or edit existing ones in the dictionary using a key.
@@ -66,7 +66,7 @@ Notice that the key `"Davidson"` was added with value `"Java"` and `"ethanday"` 
 
 Alternatively, you can use the `.get()` and `.setdefault()` methods instead in order to avoid errors.
 
-`.get()` has two arguments, the second of which being optional and defaulting to `None`. The first argument is the key want to access while the second is the value to return if the key doesn't exist.
+`.get()` has two arguments. The first argument is the key you want to access. The second argument is the value you want to return if the key doesn't exist. The second argument is optional and defaults to `None`.
 
 ```python
 x = officers.get("Davidson", "Not a real officer") # "Java"
@@ -85,7 +85,7 @@ print(officers) # {"John":"Java", "Elvin":"Java", "Chloe":"Python", "Davidson":"
 ## Viewing the keys and values of a dict
 
 
- The `.keys()`, `.values()`, and `.items()` return an iterable of type `dict_values`. A dict_values object can be turned into a list with `list(dict_values)` or iterated with a loop. They do not natively have indexing.
+ The `.keys()`, `.values()`, and `.items()` methods return an iterable of type `dict_values`. A dict_values object can be turned into a list with `list(dict_values)` or iterated with a loop. They do not natively have indexing.
 
 ```python
 aDict = {0:"cherry tree", 1:"hats", 2:"sphere"}
@@ -93,8 +93,6 @@ keys = aDict.keys() # dict_values([0, 1, 2])
 vals = aDict.values() # dict_values(["cherry tree", "hats", "sphere"])
 items = aDict.items() # dict_values([(0, "cherry tree"), (1, "hats"), (2, "sphere")])
 ```
-
-
 
 ## Traversing the dict using a for loop
 
@@ -108,6 +106,7 @@ for key in a:
 
 for key in a.keys():
     print(key)
+
 # both produce
 # k0
 # k1
@@ -118,6 +117,7 @@ To iterate through all the values in a dictionary you can use any of the followi
 ```python
 for val in a.values():
     print(val)
+
 # v0
 # v1
 # 14
@@ -127,6 +127,7 @@ for key, val in a.items():
 
 for key in a:
     print(key, "-", a[key])
+
 # both produce
 # k0 - v0
 # k1 - v1
