@@ -27,3 +27,48 @@ def english_beggars(golds):
 
 
 print(english_beggars([1, 2, 3, 4, 5]))
+
+
+# Challenge 3 Part 1
+def josephus_survivor(n, one_every):
+    sequ = []
+    for i in range(1, n + 1):
+        sequ.append(i)
+    #print(sequ)
+    index = -1
+    while len(sequ) != 1:
+        index += one_every
+        while index >= len(sequ):
+            index -= len(sequ)
+        #print(sequ[index])
+        sequ.pop(index)
+        #print(sequ)
+        index -= 1
+        #print(index)
+    return sequ
+
+
+print(josephus_survivor(7, 3))
+
+
+# Challenge 3 Part 2
+def josephus_permutation(n, k):
+    sequ = []
+    perm = []
+    for i in range(1, n + 1):
+        sequ.append(i)
+    #print(sequ)
+    index = -1
+    while len(sequ) != 0:
+        index += k
+        while index >= len(sequ):
+            index -= len(sequ)
+        #print(sequ[index])
+        perm.append(sequ.pop(index))
+        #print(sequ)
+        index -= 1
+        #print(index)
+    return perm
+
+
+print(josephus_permutation(7, 3))
